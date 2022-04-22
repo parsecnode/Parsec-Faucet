@@ -7,19 +7,19 @@ Donations to Lightyear Personal Wallet for Developing:
 Changes for PARS by Parsec Node team 2022, Lightyear
 
 Parsec Dev team donation wallet:
-Kdev1L9V5ow3cdKNqDpLcFFxZCqu5W2GE9xMKewsB2pUXWxcXvJaUWHcSrHuZw91eYfQFzRtGfTemReSSMN4kE445i6Etb3
+PARSkH3DLhkLLhtVWPBRkfXMVJdHFKPfr4kZLxenw4soT1NnCAtwLVEb61NQsHSFr7CHRUBQRW9UpTbphdEAaA926dwnyozsbh
 
 */
 
-$faucetTitle      = "Кран карбованців";
-$faucetSubtitle   = "Кожні 12 год. можна отримати безкоштовні карбованці";
+$faucetTitle      = "Parsec Faucet";
+$faucetSubtitle   = "Every 12 hours you can get free PARS (parsec)";
 $logo             = "images/parsec.png";
 
 // Address for RPC client
 $jsonrpc_server = 'http://127.0.0.1:8070/json_rpc';
 
 //Faucet address for donations
-$faucetAddress    = "";
+$faucetAddress    = "PARSkH3DLhkLLhtVWPBRkfXMVJdHFKPfr4kZLxenw4soT1NnCAtwLVEb61NQsHSFr7CHRUBQRW9UpTbphdEAaA926dwnyozsbh";
 
 // Transaction for 1 fee and divider to convert atomic currency units to PARS
 $transactionFee   = 100000000;
