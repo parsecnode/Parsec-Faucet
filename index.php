@@ -59,41 +59,41 @@ require_once 'config.php';
 						if($mensaje == "captcha"){
 				?>
 						<div  id="alert" class="alert alert-error radius">
-							Неправильна Captcha, введіть правильну.
+							Invalid Captcha, enter correct.
 						</div>
 				<?php 
 						} else 
 						if($mensaje == "wallet"){ 
 				?>
 							<div id="alert" class="alert alert-error radius">
-							  Введіть правильну адресу карбованців.
+							  Enter the correct Parsec wallet address 
 							</div>
 				<?php 
 						}else 
 						if($mensaje == "success"){ 
 				?>
 							<div class="alert alert-success radius">
-							Ви виграли <?php echo $_GET['amount']; ?> крб.<br/><br/>
-							Ви отримаєте <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> крб. (Комісія мережі <?php echo $transactionFee/$dividirEntre ?>)<br/>
-							<a target="_blank" href="https://explorer.parsecnodes.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction">Перевірити у блокчейні</a>
+							You Won <?php echo $_GET['amount']; ?> pars.<br/><br/>
+							You will receive <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> pars. (Network Commission) <?php echo $transactionFee/$dividirEntre ?>)<br/>
+							<a target="_blank" href="http://explorer.parsecnodes.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction">Check in the blockchain</a>
 							</div>
 				<?php } else 
 						if($mensaje == "paymentID"){ 
 				?>
 							<div id="alert" class="alert alert-error radius">
-							  Перевірте ваш payment ID. <br>Він повинен складатись з 64 знаків без спецсимволів.
+							  Check your payment ID. <br>It must consist of 64 characters without special characters.
 							</div>
 				<?php } else 
 						if($mensaje == "notYet"){ 
 				?>
 						<div id="alert" class="alert alert-warning radius">
-						  Карбованці видаються раз на 12 годин. Зайдіть пізніше.
+						  Parsec are issued every 12 hours. Come back later.
 						</div>
 				<?php } 
 					} 
 				?>
 				<div class="alert alert-info radius">
-				Баланс: <?php echo $balanceDisponibleFaucet ?> крб.<br>
+				Баланс: <?php echo $balanceDisponibleFaucet ?> pars.<br>
 				<?php
 					$link = mysqli_connect($hostDB, $userDB, $passwordDB, $database);
 
@@ -109,26 +109,26 @@ require_once 'config.php';
 
 					mysqli_close($link);
 				?>
-				Роздано: <?php echo $dato[0]/$dividirEntre; ?> крб. за <?php echo $dato2[0];?> виплат(и).
+				Handed out: <?php echo $dato[0]/$dividirEntre; ?> pars. for <?php echo $dato2[0];?> VIP(s).
             </div>
 
             <?php 
 				if($balanceDisponibleFaucet<1.0){ 
 			?>
             <div class="alert alert-warning radius">
-             Кран порожній або баланс менший ніж виграш. <br> Зайдіть пізніше, &ndash; може хтось пожертвує нам трохи карбованців.
+             The tap is empty or the balance is less than the win. <br> Come back later, &ndash; maybe someone will donate us a few parsec.
 			</div>
 			<?php 
 				} elseif (!$link) {
 					// $link = mysqli_connect($hostDB, $userDB, $passwordDB, $database);
 
-					die('Помилка піключення ' . mysql_error());
+					die('Connection error ' . mysql_error());
 				}  else {  
 			?>
 
-           <input type="text" name="wallet" required placeholder="Адреса карбованців">
+           <input type="text" name="wallet" required placeholder="Parsec Address">
 
-           <input type="text" name="paymentid" placeholder="Payment ID (Необов'язково)" >
+           <input type="text" name="paymentid" placeholder="Payment ID (Not necessary)" >
            <br/>
 		   
            <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
@@ -140,7 +140,7 @@ require_once 'config.php';
 				echo $recaptcha->render();     
            ?>
 
-           <center><input type="submit" value="Отримати безкоштовні карбованці!"></center>
+           <center><input type="submit" value="Get Free Parsec!"></center>
            <br>
            
 		   <!-- ADS ADS ADS ADS ADS ADS ADS ADS ADS -->
@@ -174,12 +174,12 @@ require_once 'config.php';
 		   ?>
 
           <div class="table-responsive">
-            <h6><b>Останні 5 поповнень</b></h6>
+            <h6><b>Last 5 replenishments</b></h6>
             <table class="table table-bordered table-condensed">
               <thead>
                 <tr>
-                  <th>Дата</th>
-                  <th>Сума</th>
+                  <th>Date</th>
+                  <th>Amount</th>
                 </tr>
               </thead>
               <tbody>
@@ -204,7 +204,7 @@ require_once 'config.php';
               </tbody>
             </table>
           </div>
-          <p style="font-size:10px;">Пожертвуйте Parsec, щоб підтримати цей кран. <br>Адреса: <?php echo $faucetAddress; ?><br>&#169; 2022 Faucet by <a href="https://github.com/parsecnode/Parsec-Faucet" target="_blank">Lightyear</a><br/></p></center>
+          <p style="font-size:10px;">Donate Parsec to support this tap. <br>Address: <?php echo $faucetAddress; ?><br>&#169; 2022 Faucet by <a href="https://github.com/parsecnode/Parsec-Faucet" target="_blank">Lightyear</a><br/></p></center>
           <footer class="clearfix">
           </footer>
         </form>
