@@ -15,7 +15,7 @@
         <fieldset>
           <img src="images/abp.jpg" height="100">
           <h1>Please Disable your Adblocker</h1>
-          <p><b>We love Adblockers</b> but we need ads to keep the faucet running, every cent we make from faucet ads is used to buy more BCN and give it away here. Please Help Us!</p>
+          <p><b>We love Adblockers</b> but we need ads to keep the faucet running, every cent we make from faucet ads is used to buy more PARS and give it away here. Please Help Us!</p>
           <a id="backFaucet" style="font-size:10px;" href="./?recheck">I have disabled my adblocker</a>
           <hr>
           <p style="font-size:10px;">Please consider donating to keep the faucet alive. <br>Address: <?php echo $faucetAddress; ?></p>

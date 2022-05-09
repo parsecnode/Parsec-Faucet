@@ -74,7 +74,7 @@ require_once 'config.php';
 				?>
 							<div class="alert alert-success radius">
 							You Won <?php echo $_GET['amount']; ?> pars.<br/><br/>
-							You will receive <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> pars. (Network Commission) <?php echo $transactionFee/$dividirEntre ?>)<br/>
+							You will receive <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> PARS. (Network Commission) <?php echo $transactionFee/$dividirEntre ?>)<br/>
 							<a target="_blank" href="http://explorer.parsecnodes.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction">Check in the blockchain</a>
 							</div>
 				<?php } else 
@@ -87,13 +87,13 @@ require_once 'config.php';
 						if($mensaje == "notYet"){ 
 				?>
 						<div id="alert" class="alert alert-warning radius">
-						  Parsec are issued every 12 hours. Come back later.
+						  Parsec (PARS) are issued every 12 hours. Come back later.
 						</div>
 				<?php } 
 					} 
 				?>
 				<div class="alert alert-info radius">
-				Баланс: <?php echo $balanceDisponibleFaucet ?> pars.<br>
+				BALANCE: <?php echo $balanceDisponibleFaucet ?> PARS.<br>
 				<?php
 					$link = mysqli_connect($hostDB, $userDB, $passwordDB, $database);
 
@@ -109,7 +109,7 @@ require_once 'config.php';
 
 					mysqli_close($link);
 				?>
-				Handed out: <?php echo $dato[0]/$dividirEntre; ?> pars. for <?php echo $dato2[0];?> VIP(s).
+				Handed out: <?php echo $dato[0]/$dividirEntre; ?> PARS. for <?php echo $dato2[0];?> VIP(s).
             </div>
 
             <?php 

@@ -34,14 +34,14 @@ $maxReward        = "1";
 
 //Database connection
 $hostDB           = "127.0.0.1";
-$database         = "";
-$userDB           = "";
-$passwordDB       = "";
+$database         = "faucetdb";
+$userDB           = "parsecfaucet";
+$passwordDB       = "9@rs3cfaucet54";
 
 //Recaptcha Keys. You can get yours here: https://www.google.com/recaptcha/
 $keys             = array(
-		'site_key' => '',
-		'secret_key' => ''
+		'site_key' => '6LfXEs0fAAAAAB3Ib6-hicPPaPk-kNsgByUPd7wx',
+		'secret_key' => '6LfXEs0fAAAAALvz06wm0WdCTUfInFftRENNDBkp'
 );
 
 //Addresses that can request more than one time but with a different payment ID.
