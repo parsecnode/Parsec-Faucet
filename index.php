@@ -73,9 +73,9 @@ require_once 'config.php';
 						if($mensaje == "success"){ 
 				?>
 							<div class="alert alert-success radius">
-							You Won <?php echo $_GET['amount']; ?> pars.<br/><br/>
-							You will receive <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> PARS. (Network Commission) <?php echo $transactionFee/$dividirEntre ?>)<br/>
-							<a target="_blank" href="http://explorer.parsecnodes.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction">Check in the blockchain</a>
+							You Received <?php echo $_GET['amount']; ?> PARS.<br/><br/>
+							You Will Receive <?php echo $_GET['amount']-($transactionFee/$dividirEntre); ?> PARS. (Network Commission) <?php echo $transactionFee/$dividirEntre ?>)<br/>
+							<a target="_blank" href="http://parsecnodes.com/?hash=<?php echo $_GET['txid']; ?>#blockchain_transaction">Check the Blockchain</a>
 							</div>
 				<?php } else 
 						if($mensaje == "paymentID"){ 
@@ -87,7 +87,7 @@ require_once 'config.php';
 						if($mensaje == "notYet"){ 
 				?>
 						<div id="alert" class="alert alert-warning radius">
-						  Parsec (PARS) are issued every 12 hours. Come back later.
+						  Parsec (PARS) Issued Every 12 Hours. Come Back Later.
 						</div>
 				<?php } 
 					} 
@@ -109,14 +109,14 @@ require_once 'config.php';
 
 					mysqli_close($link);
 				?>
-				Handed out: <?php echo $dato[0]/$dividirEntre; ?> PARS. for <?php echo $dato2[0];?> VIP(s).
+				Handed Out: <?php echo $dato[0]/$dividirEntre; ?> PARS. for <?php echo $dato2[0];?> VIP(s).
             </div>
 
             <?php 
 				if($balanceDisponibleFaucet<1.0){ 
 			?>
             <div class="alert alert-warning radius">
-             The tap is empty or the balance is less than the win. <br> Come back later, &ndash; maybe someone will donate us a few parsec.
+             The tap is empty or the balance is less than the receiving amount. <br> Come back later &ndash; to see if tap has been replenished. 
 			</div>
 			<?php 
 				} elseif (!$link) {
@@ -174,7 +174,7 @@ require_once 'config.php';
 		   ?>
 
           <div class="table-responsive">
-            <h6><b>Last 5 replenishments</b></h6>
+            <h6><b>Last 6 replenishments</b></h6>
             <table class="table table-bordered table-condensed">
               <thead>
                 <tr>
@@ -204,7 +204,7 @@ require_once 'config.php';
               </tbody>
             </table>
           </div>
-          <p style="font-size:10px;">Donate Parsec to support this tap. <br>Address: <?php echo $faucetAddress; ?><br>&#169; 2022 Faucet by <a href="https://github.com/parsecnode/Parsec-Faucet" target="_blank">Lightyear</a><br/></p></center>
+          <p style="font-size:10px;">Donate Parsec to Tap:. <br>Address: <?php echo $faucetAddress; ?><br>&#169; 2022 Faucet by <a href="https://github.com/parsecnode/Parsec-Faucet" target="_blank">Lightyear</a><br/></p></center>
           <footer class="clearfix">
           </footer>
         </form>

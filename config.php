@@ -16,7 +16,7 @@ $faucetSubtitle   = "Every 12 hours you can get free Parsec (PARS)";
 $logo             = "images/parsec.png";
 
 // Address for RPC client
-$jsonrpc_server = 'http://127.0.0.1:8070/json_rpc';
+$jsonrpc_server = 'http://127.0.0.1:15000/json_rpc';
 
 //Faucet address for donations
 $faucetAddress    = "PARSkH3DLhkLLhtVWPBRkfXMVJdHFKPfr4kZLxenw4soT1NnCAtwLVEb61NQsHSFr7CHRUBQRW9UpTbphdEAaA926dwnyozsbh";
@@ -33,10 +33,10 @@ $minReward        = "0.1";
 $maxReward        = "1";
 
 //Database connection
-$hostDB           = "127.0.0.1";
+$hostDB           = "localhost:3306";
 $database         = "faucetdb";
-$userDB           = "parsecfaucet";
-$passwordDB       = "9@rs3cfaucet54";
+$userDB           = "explorer";
+$passwordDB       = "9ar53c3xpl0rer54$";
 
 //Recaptcha Keys. You can get yours here: https://www.google.com/recaptcha/
 $keys             = array(
